@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Vegetable Market</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Online Vegetable Market</h1>
+        <nav>
+            <ul>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="product-list">  
+            <article class="product">
+                <img src="tomato.jpg" alt="Tomato">
+                <h2>Tomato</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="tomato" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="carrot.jpg" alt="Carrot">
+                <h2>Carrot</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="carrot" data-price="30">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="beans.jpg" alt="Beans">
+                <h2>Beans</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="beans" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="bitterGourd.jpg" alt="Bitter Gourd">
+                <h2>Bitter Gourd</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="bitterGourd" data-price="30">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="bottleGourd.jpg" alt="Bottle Gourd">
+                <h2>Bottle Gourd</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="bottleGourd" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="brinjal.jpg" alt="Brinjal">
+                <h2>Brinjal</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="brinjal" data-price="30">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="cabbage.jpg" alt="Cabbage">
+                <h2>Cabbage</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="cabbage" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="cauliflower.jpg" alt="Cauliflower">
+                <h2>Cauliflower</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="cauliflower" data-price="30">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="clusterBeans.jpg" alt="Cluster Beans">
+                <h2>Cluster Beans</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="clusterBeans" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="cowPeas.jpg" alt="Cowpeas">
+                <h2>Cowpeas</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="cowPeas" data-price="30">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="drumstics.jpg" alt="Drumsticks">
+                <h2>Drumsticks</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="drumsticks" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="onion.jpg" alt="Onion">
+                <h2>Onion</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="onion" data-price="30">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="potato.jpg" alt="Potato">
+                <h2>Potato</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="potato" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="ridgeGourd.jpg" alt="Ridge Gourd">
+                <h2>Ridge Gourd</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="ridgeGourd" data-price="30">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="sweetPatato.jpg" alt="sweetPotato">
+                <h2>Sweet Potato</h2>
+                <p>Price: Rs.60 per kg</p>
+                <button class="add-to-cart" data-product="sweetPotato" data-price="60">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="yam.jpg" alt="Yam">
+                <h2>Yam</h2>
+                <p>Price: Rs.30 per kg</p>
+                <button class="add-to-cart" data-product="yam" data-price="30">Add to Cart</button>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+       
+    </footer>
+
+<!-- Modal HTML -->
+<div id="notification-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="notification-message">Product  to cart.</h2>
+        <button id="confirm-cancel">Cancel</button>
+        <button id="confirm-ok">OK</button>
+    </div>
+</div>
+
+
+    <script src="main.js" defer></script>
+
+
+</body>
+</html>
