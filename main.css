@@ -233,7 +233,7 @@ footer a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    /* Adjust the number of products per row */
+    /* Ensure two products per row on tablets and smaller screens */
     .product-list {
         grid-template-columns: repeat(2, 1fr); /* Two products per row */
     }
