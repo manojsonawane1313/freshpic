@@ -8,13 +8,21 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the Online Vegetable Market</h1>
-        <nav>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1>Freshpic Green Market</h1>
+        <nav id="menu" class="hidden">
             <ul>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <!-- Add more menu items as needed -->
             </ul>
         </nav>
     </header>
+    
     
     <main>
         <section class="product-list">  
@@ -117,9 +125,12 @@
         </section>
     </main>
     
-    <footer>
-       
-    </footer>
+    <a href="cart.html">
+        <footer>
+            <p>Cart</p>
+        </footer>
+    </a>
+    
 
 <!-- Modal HTML -->
 <div id="notification-modal" class="modal">
