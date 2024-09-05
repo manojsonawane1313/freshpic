@@ -9,98 +9,160 @@ body, h1, h2, p, ul {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #88e99b;
     color: #333;
 }
 
 /* Header styling */
 header {
-    background: #333;
+    background: #24b930;
     color: #fff;
     padding: 10px 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
+    justify-content: center; /* Center header content horizontally */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Fixed position to keep header at the top */
+    top: 0; /* Stick to the top of the viewport */
     left: 0;
     right: 0;
-    z-index: 1000;
-    transition: transform 0.3s ease;
+    z-index: 1000; /* Ensure it's on top of other content */
+    transition: transform 0.3s ease; /* Smooth transition for hide/show */
 }
+
+/* Menu icon styling */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+}
+
+/* Menu icon bars */
+.bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Menu styling */
+nav {
+    position: absolute;
+    top: 50px; /* Adjust this value if necessary */
+    left: -220px; /* Hide the menu off-screen to the left initially */
+    background: #052e08;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Adjust width as necessary */
+    transition: left 0.3s ease; /* Add transition for sliding effect */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Menu shown */
+nav.show {
+    left: 0px; /* Position the menu in view */
+}
+
+/* Hidden menu */
+nav.hidden {
+    left: -220px; /* Keep menu off-screen to the left */
+}
+
+/* Initially visible menu icon */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 10px; /* Adjust as necessary */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Hidden menu icon */
+.menu-icon.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Menu icon bars */
+.bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: #28a745;
+}
+
 
 /* Ensure header is initially visible */
 header.header-visible {
-    transform: translateY(0);
+    transform: translateY(0); /* Header is visible */
 }
 
 /* Hide header when scrolling down */
 header:not(.header-visible) {
-    transform: translateY(-100%);
+    transform: translateY(-100%); /* Move header out of view */
 }
 
 /* Heading styling */
 header h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.5em; /* Adjust size as needed */
     text-align: center;
-    flex: 1;
+    flex: 1; /* Allow h1 to take up remaining space */
 }
 
-/* Navigation styling */
-nav {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin-left: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background: #575757;
-    color: #fff;
-    border-radius: 5px;
-}
 
 /* Main content styling */
 main {
-    padding: 20px;
+    /* padding: 15px; */
     margin-top: 60px; /* Add space for fixed header */
 }
 
-/* Product list styling */
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 10px;
 }
 
 .product {
-    background: #fff;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
     text-align: center;
     padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product img {
@@ -118,36 +180,37 @@ main {
 
 .add-to-cart {
     background: #28a745;
-    border: none;
+    border:#333;
     color: #fff;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .add-to-cart:hover {
-    background: #218838;
+    background: #c07a19;
+    
 }
 
 .add-to-cart:focus {
-    outline: 2px solid #333;
+    outline: 2px solid #333; /* Focus outline for accessibility */
     outline-offset: 4px;
 }
 
 /* Modal styling */
 .modal {
-    display: none;
-    position: fixed;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position to stay in place */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.5); /* Semi-transparent background */
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000; /* Ensure it's on top of other content */
 }
 
 .modal-content {
@@ -155,10 +218,10 @@ main {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    width: 80%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 80%; /* Responsive width */
+    max-width: 500px; /* Max width */
+    position: relative; /* Position for the close button */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for better visibility */
 }
 
 /* Close button styling */
@@ -172,7 +235,7 @@ main {
 }
 
 .close-btn:hover {
-    color: #dc3545;
+    color: #dc3545; /* Red color on hover for emphasis */
 }
 
 /* Notification message styling */
@@ -203,91 +266,26 @@ main {
 
 #confirm-cancel:hover, #confirm-ok:hover {
     opacity: 0.9;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 #confirm-cancel:focus, #confirm-ok:focus {
-    outline: 2px solid #333;
+    outline: 2px solid #333; /* Focus outline for accessibility */
     outline-offset: 4px;
 }
 
 /* Footer styling */
 footer {
-    background: #333;
+    background: #d10f23;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    /* Ensure two products per row on tablets and smaller screens */
-    .product-list {
-        grid-template-columns: repeat(2, 1fr); /* Two products per row */
-    }
-
-    /* Adjust header padding and font sizes */
-    header {
-        padding: 8px 15px;
-    }
-
-    header h1 {
-        font-size: 1.2em;
-    }
-
-    nav {
-        right: 10px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    /* Adjust main content padding */
-    main {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further adjustments for very small screens */
-    .product-list {
-        grid-template-columns: repeat(2, 1fr); /* Two products per row */
-    }
-
-    /* Adjust header and nav for very small screens */
-    header {
-        padding: 5px 10px;
-    }
-
-    header h1 {
-        font-size: 1em;
-    }
-
-    nav {
-        right: 5px;
-    }
-
-    nav a {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    /* Further adjustments for main content */
-    main {
-        padding: 10px;
-    }
+a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit color from parent (footer) */
 }
