@@ -128,3 +128,28 @@ function throttleScroll() {
 
 // Event listener for scroll events
 window.addEventListener('scroll', throttleScroll);
+
+
+// Get menu elements
+const menuIcon = document.getElementById('menu-icon');
+const menu = document.getElementById('menu');
+
+// Function to toggle the menu visibility
+function toggleMenu() {
+    if (menu.classList.contains('hidden') || menu.classList.contains('show')) {
+        menu.classList.toggle('hidden'); // Toggle hidden class
+        menu.classList.toggle('show');   // Toggle show class
+    }
+}
+
+// Add event listener to menu icon
+menuIcon.addEventListener('click', toggleMenu);
+
+// Optional: Hide the menu when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (!menuIcon.contains(event.target) && !menu.contains(event.target)) {
+        menu.classList.add('hidden');
+        menu.classList.remove('show');
+    }
+});
+
