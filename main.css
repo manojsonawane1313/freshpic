@@ -289,3 +289,16 @@ a {
     text-decoration: none; /* Remove underline from link */
     color: inherit; /* Inherit color from parent (footer) */
 }
+
+@media (max-width: 600px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    }
+}
+
+/* For very small screens (e.g., extra-small mobile devices) */
+@media (max-width: 400px) {
+    .product-list {
+        grid-template-columns: repeat(1, 1fr); /* One item per row */
+    }
+}
